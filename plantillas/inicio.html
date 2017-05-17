@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col s7 m3 l3"><img class="responsive-img" src="imagenes/bebidas.jpg">Bebidas</div>
+    <div class="col s7 m3 l3"><img class="responsive-img" src="imagenes/desayuno.jpg">Desayunos</div>
+    <div class="col s7 m3 l3"><img class="responsive-img" src="imagenes/comida.jpg">Almuerzos</div>
+    <div class="col s7 m3 l3"><img class="responsive-img" src="imagenes/vino.jpg">Vinos</div>
+</div>
+
+
+<div class="row">
+
+        <div class="col s12 m6">
+            <div class="card" ng-repeat="producto in productos" ng-class="{'ocultar' : producto.ocultar}">
+                <div class="card-image" >
+                    <img ng-src="/imagenes/{{producto.imagen}}" width="50">
+                    <span class="card-title">{{producto.nombre}}</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red" onclick="Materialize.toast('se agrego al carrito', 4000)"
+                       ng-click="comprar(producto)" ng-disabled="producto.ocultar"><i class="material-icons">add</i></a>
+                </div>
+                <div class="card-content">
+                    <p>
+                        {{producto.descripcion}}
+                    </p>
+
+                    <div class="precio">{{producto.precio | currency}}</div>
+                </div>
+            </div>
+        </div>
+
+    <button class="btn btn-danger" ng-click="finalizar()"> Finalizar Compra</button>
+
+</div>
+
+
+<div class="col-sm-3 carrito">
+
+    <h4><i class="fa fa-shopping-cart"></i> Carrito de compras</h4>
+
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="producto in carrito" >
+            {{producto.nombre}}
+            <strong class="pull-right">{{producto.precio | currency }}</strong>
+        </li>
+    </ul>
+
+    <h2>Total: ${{total()}}</h2>
+
+    <p>{{totalP()}}</p>
+
+    <button class="btn btn-danger" ng-click="finalizar()"> Finalizar Compra</button>
+
+</div>
+
+
+

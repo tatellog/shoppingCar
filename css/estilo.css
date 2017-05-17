@@ -1,0 +1,95 @@
+.side-nav {
+    overflow: visible !important;
+}
+
+.side-nav2,
+.side-nav3,
+.side-nav4,
+.side-nav5 {
+    margin-left: 25%;
+    height: 20%;
+    display: none;
+}
+
+.dropdown-content {
+    margin-top: 75px;
+}
+
+
+.shopp {
+    margin-left: 57%;
+
+}
+
+.row .col.l3 {
+    width: 25%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+
+.row .col.m3 {
+    width: 25%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+
+.responsive-img img,
+video.responsive-video {
+    max-width: 100%;
+    height: auto;
+}
+
+.row {
+    align-content: center;
+}
+
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+.section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.white {
+    background-color: #fff !important;
+}
+
+.parallax img {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+div {
+    display: block;
+}
+
+.card{
+
+    width: 50%;
+    height: 50%;
+    display: inline;
+    margin-left: 1%;
+
+}
+.container{
+    position: relative;
+    width: 90%;
+    text-align: center;
+}
+
+    .row .col.m6 {
+        margin-left: 20%;
+        left: auto;
+        right: auto;
+        display: inline-flex;
+        width: 80%;
+    }
