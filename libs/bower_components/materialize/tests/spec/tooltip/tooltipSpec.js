@@ -10,7 +10,7 @@ describe( 'Tooltip:', function() {
 
 
     it('Opens a tooltip on mouse enter', function(done) {
-      tooltippedBtn = $('#test');
+      tooltippedBtn = $('#test.js');
       tooltip = $('#' + tooltippedBtn.attr('data-tooltip-id'));
 
       // Mouse enter
@@ -72,7 +72,7 @@ describe( 'Tooltip:', function() {
 
     it('Changes position attribute dynamically and positions tooltips on the right correctly',
         function(done) {
-      tooltippedBtn = $('#test');
+      tooltippedBtn = $('#test.js');
       tooltippedBtn.attr('data-position', 'right');
       tooltip = $('#' + tooltippedBtn.attr('data-tooltip-id'));
       // Mouse enter
@@ -87,7 +87,7 @@ describe( 'Tooltip:', function() {
 
 
     it('Accepts delay option from javascript initialization', function(done) {
-      tooltippedBtn = $('#test');
+      tooltippedBtn = $('#test.js');
       tooltippedBtn.removeAttr('data-delay');
       tooltippedBtn.tooltip({delay: 200});
       tooltip = $('#' + tooltippedBtn.attr('data-tooltip-id'));

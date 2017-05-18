@@ -42,7 +42,7 @@ Before writing tests, make sure you are working off of a clean git branch of you
 
 Before writing tests, make sure you understand what the expected-behavior of the component actually is. Reading over the component code and documentation will greatly aid you in this regard.
 
-Use `describe` blocks to section disparate portions of tests and `it` blocks inside those to further break up tests into features. Inside `it` blocks, you can have multiple except statements. As a general testing principle, be sure to try and test both the case and its “inverse” to lessen the chance for false positives.
+Use `describe` blocks to section disparate portions of tests and `it` blocks inside those to further break up tests into features. Inside `it` blocks, you can have multiple except statements. As a general testing principle, be sure to try and test.js both the case and its “inverse” to lessen the chance for false positives.
 
 Example:
 ```javascript
@@ -50,9 +50,9 @@ expect(toast.first('span').text()).toBe('I am toast content');
 expect(toast.first('span').text()).not.toBe('I am toast');
 ```
 
-You can use beforeEach, and afterEach in either block to designate code that will execute before or after each item. This is useful if you need to setup some scenario for each test, or reset some things after each test.
+You can use beforeEach, and afterEach in either block to designate code that will execute before or after each item. This is useful if you need to setup some scenario for each test.js, or reset some things after each test.js.
 
-When writing expect statements (Jasmine’s form of assert), it is very important to write an expected behavior string so in the event of an error, the test that failed is very clear. 
+When writing expect statements (Jasmine’s form of assert), it is very important to write an expected behavior string so in the event of an error, the test.js that failed is very clear. 
 
 Example:
 ```javascript
@@ -78,7 +78,7 @@ Try and keep your commit history clean and concise. Once you submit your pull re
 
     This would only run specs with tabs in its name. 
 
-2. If you need a timeout in your test (waiting for some animation or action to be executed) you need to use the done callback. In your `it()` behavior function set done as an argument to your anonymous function. Then you can use javascript’s window `setTimeout`s normally. And when you want the test to finish just call the `done()` function. For example:
+2. If you need a timeout in your test.js (waiting for some animation or action to be executed) you need to use the done callback. In your `it()` behavior function set done as an argument to your anonymous function. Then you can use javascript’s window `setTimeout`s normally. And when you want the test.js to finish just call the `done()` function. For example:
     
     ```javascript
     it ('should wait for a timeout', function(done) {

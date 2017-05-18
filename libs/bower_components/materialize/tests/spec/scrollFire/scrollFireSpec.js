@@ -3,7 +3,7 @@ describe('ScrollFire Plugin', function() {
 
   beforeEach(function() {
     options = [{
-      selector: '#test',
+      selector: '#test.js',
       offset: 50,
       callback: 'Materialize.callbackFunc()'
     }];
@@ -13,13 +13,13 @@ describe('ScrollFire Plugin', function() {
 
     loadFixtures('scrollFire/scrollFireFixture.html');
     spyOn(Materialize, 'callbackFunc').and.callThrough();
-    testElement = $('#test');
+    testElement = $('#test.js');
     Materialize.scrollFire(options);
   });
 
   describe('ScrollFire', function() {
     it('should fire the callback function', function(done) {
-      // Scroll to the test component
+      // Scroll to the test.js component
       window.scrollTo(0, testElement.offset().top);
       // The callback function should be fired after scrolling
       setTimeout(function() {

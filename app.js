@@ -26,3 +26,15 @@ miAppAngular.config( [ '$routeProvider' , function($routeProvider){
     })
     
 } ] )
+
+miAppAngular.controller('controladorDatos', function ($scope, $http) {
+
+    $scope.importar = function () {
+        $http.get('json/categories.json').success(function (datos) {
+
+            $scope.productos = datos;
+        });
+    }
+    $scope.importar();
+
+})
